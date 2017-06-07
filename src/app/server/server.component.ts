@@ -5,8 +5,6 @@ import {Component} from '@angular/core';
         template: './server.component.html'
     }
 )
-
-
 export class ServerComponent{
 
 }
