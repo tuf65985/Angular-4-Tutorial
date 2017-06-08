@@ -7,7 +7,7 @@
 type ="text"
 class="form-control"
 [(ngModel)]="serverName">
-    <p>{{serverName}}</p>
+   <p *ngIf="serverCreated">Server was created, server name is {{serverName}}</p>
 <button class="btn btn-primary" [disabled]="!allowNewServer"
 (click)="onCreateServer()">Add Server</button>
 <p>{{serverCreationStatus}}</p>
@@ -16,9 +16,11 @@ class="form-control"
 
 <hr>
 <label>Username:</label>
-<input type ="text"
+<!--<input type ="text"
         class = "form-control"
         [(ngModel)]="userName">
         <p> {{userName}}</p>
 <button class = "btn btn-primary" [disabled]="userName ===''"
-    (click)="resetUserName()">Reset Username</button>
+    (click)="resetUserName()">Reset Username</button>-->
+
+
