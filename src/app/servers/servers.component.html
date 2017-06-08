@@ -13,3 +13,12 @@ class="form-control"
 <p>{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
+
+<hr>
+<label>Username:</label>
+<input type ="text"
+        class = "form-control"
+        [(ngModel)]="userName">
+        <p> {{userName}}</p>
+<button class = "btn btn-primary" [disabled]="userName ===''"
+    (click)="resetUserName()">Reset Username</button>
