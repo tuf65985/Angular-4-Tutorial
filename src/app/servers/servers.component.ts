@@ -10,9 +10,11 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = "No server was created!";
   serverName = "Testttt";
   emptyusername = true;
-  serverCreated = false;
+  serverCreated = true;
   userName = '';
   servers = ['Testserver', 'Testserver 2'];
+  showSecret= false;
+  log = [];
   constructor() { 
     setTimeout(()=>{this.allowNewServer = true},2000);
   }
@@ -34,5 +36,9 @@ export class ServersComponent implements OnInit {
   resetUserName(){
     this.userName = '';
     this.emptyusername = true;
+  }
+  onToggleDetails(){
+    this.showSecret = !this.showSecret;
+    this.log.push(this.log.length +1);
   }
 }
